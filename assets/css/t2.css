@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    color: black;
+    background: url(rasm/back-pic.jpg);
+    font: 600 16px/18px "Open Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding: 0;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.login-wrap {
+    width: 100%;
+    margin: auto;
+    max-width: 525px;
+    min-height: 670px;
+    position: relative;
+
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-html {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 90px 70px 50px 70px;
+    background: none;
+    border-radius: 30px;
+    border: solid black 2px;
+    /*邊框顏色*/
+}
+
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 0.4s linear;
+}
+
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check {
+    display: none;
+}
+
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+    text-transform: uppercase;
+}
+
+.login-html .tab {
+    font-size: 22px;
+    margin-right: 15px;
+    cursor: pointer;
+    padding-bottom: 5px;
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+
+.login-html .sign-in:checked+.tab,
+.login-html .sign-up:checked+.tab {
+    color: red;
+    /*選擇登入或註冊點下去時的顏色*/
+    border-color: lightblue;
+    /*選擇登入或註冊點下去時的底線顏色*/
+    cursor: pointer;
+}
+
+.login-form {
+    min-height: 345px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.login-form .group {
+    margin-bottom: 15px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+    width: 100%;
+    color: green;
+    /*輸入格內字顏色*/
+    display: block;
+}
+
+.login-form .group .input,
+.login-form .group .button {
+    border: none;
+    padding: 15px 20px;
+    background: lightblue;
+    /*輸入框內顏色*/
+}
+
+.login-form .group input[data-type="password"] {
+    -webkit-text-security: circle;
+}
+
+.login-form .group .label {
+    color: black;
+    /*Username和Password字體顏色*/
+    font-size: 12px;
+    margin: 10px;
+
+}
+
+.login-form .group .button {
+    cursor: pointer;
+    border: solid 2px yellow;
+    /*sign in & sign up框線顏色顏色*/
+    background: none;
+    box-shadow: 5px 5px 10px yellow,
+        5px 5px 50px rgb(224, 224, 224);
+    /*sign in & sign up陰影顏色*/
+}
+
+.login-form .group .button:hover {
+    background: rgba(249, 247, 247, 0.664);
+    cursor: pointer;
+    box-shadow: 5px 5px 10px black,
+        5px 5px 50px black;
+
+}
+
+.login-form .group label .icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    background: lightseagreen;
+    /*未選擇時keep me signed in 的顏色*/
+}
+
+.login-form .group label .icon:before,
+.login-form .group label .icon:after {
+    content: "";
+    width: 10px;
+    height: 2px;
+    background: blue;
+    /*按下確定時勾勾顏色*/
+    position: absolute;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.login-form .group label .icon:before {
+    left: 3px;
+    width: 5px;
+    bottom: 6px;
+    transform: scale(0) rotate(0);
+}
+
+.login-form .group label .icon:after {
+    top: 6px;
+    right: 0;
+    transform: scale(0) rotate(0);
+}
+
+.login-form .group .check:checked+label {
+    color: blue;
+    /*按下確定時Keep me Signed in*/
+}
+
+.login-form .group .check:checked+label .icon {
+    background: red;
+}
+
+.login-form .group .check:checked+label .icon:before {
+    transform: scale(1) rotate(45deg);
+}
+
+.login-form .group .check:checked+label .icon:after {
+    transform: scale(1) rotate(-45deg);
+}
+
+.login-html .sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-htm {
+    transform: rotate(0);
+}
+
+.login-html .sign-up:checked+.tab+.login-form .sign-up-htm {
+    transform: rotate(0);
+}
+
+.hr {
+    height: 2px;
+    margin: 60px 0 50px 0;
+    background: red;
+    /*最底下底線顏色*/
+}
+
+.foot-lnk {
+    text-align: center;
+    color: aqua;
+    /*Forgot Password? 顏色*/
+}
+
+input {
+    border-radius: 20px;
+    border: solid blue 2px;
+}
+
+
+#user.input {
+    background-color: none;
+}
+
+
+#user.input,
+#pass.input {
+    border: solid 2px black;
+    /*輸入區框線顏色*/
+    box-shadow: 5px 5px 10px rgb(224, 224, 224),
+        5px 5px 50px rgb(224, 224, 224);
+}
+
+
+
+.button {
+    transition: all 0.15s;
+}
+
+.button:active {
+    opacity: 0.8;
+}
+
+.login-wrap {
+    top: 50px;
+    position: absolute;
+    backdrop-filter: blur(10px);
+}

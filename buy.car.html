@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車</title>
+    <link rel="stylesheet" href="./assets/css/buy.car.css">
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <ul class="drop-down-menu">
+                <li><a href="index.html">首頁</a>
+                </li>
+                <li><a href="aboutus.html">關於我們</a>
+                </li>
+                <li><a href="desk.html">商品</a>
+                    <ul>
+                        <li><a href="desk.html">書桌</a>
+                        </li>
+                        <li><a href="chair.html">椅子</a>
+                        </li>
+                        <li><a href="cabinet.html">櫃子</a>
+                        </li>
+                        <li><a href="sofa.html">沙發</a>
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+          
+        </nav>
+
+
+        
+        <div class="icon">
+            <a href="backrest.html">
+                <img src="./assets/image/backrest.png" width="30px" height="30px"/>
+            </a>
+            <a href="buy.car.html">
+                <img src="./assets/image/shopping.png" width="30px" height="30px"/>
+            </a>
+            <a href="member.html">
+                <img src="./assets/image/member.png" width="30px" height="30px"/>
+            </a>
+        </div>
+    
+        <input id="search" type="text" name="" placeholder="搜尋..." class="search">
+        <input type="submit" value="搜尋" class="searchbutton">
+    </header>
+
+
+<article>
+    <div class="container">
+        <hr><h2 class="title">購物車</h2>
+        <h4 class="tagline">Shopping Cart</h4><hr>    
+    
+        <div class="container">
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>商品</th>
+                        <th>價格(NT)</th>
+                        <th>數量</th>
+                        <th>小計(NT)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button class="delete-btn" onclick="deleteProduct('quantity1')">X</button>
+                            雙人沙發
+                        </td>
+                        <td class="price">$14600</td>
+                        <td class="quantity" id="quantity1">
+                            <button class="quantity-btn" onclick="updateQuantity('quantity1', -1)">-</button>
+                            <span class="quantity-value">1</span>
+                            <button class="quantity-btn" onclick="updateQuantity('quantity1', 1)">+</button>
+                        </td>
+                        <td class="subtotal">$14600</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="delete-btn" onclick="deleteProduct('quantity2')">X</button>
+                            實木複合式書桌
+                        </td>
+                        <td class="price">$3950</td>
+                        <td class="quantity" id="quantity2">
+                            <button class="quantity-btn" onclick="updateQuantity('quantity2', -1)">-</button>
+                            <span class="quantity-value">3</span>
+                            <button class="quantity-btn" onclick="updateQuantity('quantity2', 1)">+</button>
+                        </td>
+                        <td class="subtotal">$3950</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+            <p id="total">Total: $18550</p>
+
+            <label for="paymentMethod">付款方式:</label>
+            <select id="paymentMethod" name="paymentMethod" class="part">
+                <option value="creditCard">信用卡</option>
+                <option value="creditCard">金融卡</option>
+            </select>
+
+            <label for="creditCardNumber">卡號:</label>
+            <input type="text" id="creditCardNumber" name="creditCardNumber" class="part">
+
+            <label for="shippingAddress">運送地址:</label>
+            <input type="text" id="shippingAddress" name="shippingAddress" class="part">
+
+            <button class="checkout-btn" onclick="checkout()">結帳</a>
+        </div>
+    </div>
+</article>
+
+<script src="buy.car.js"></script>   
+
+    
+</body>
+</html>

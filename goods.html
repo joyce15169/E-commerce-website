@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Blanket</title>
+    <link rel="stylesheet" href="assets/css/goods.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    
+    
+
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="drop-down-menu">
+                <li><a href="index.html">首頁</a>
+                </li>
+                <li><a href="aboutus.html">關於我們</a>
+                </li>
+                <li><a href="desk.html">商品</a>
+                    <ul>
+                        <li><a href="desk.html">書桌</a>
+                        </li>
+                        <li><a href="chair.html">椅子</a>
+                        </li>
+                        <li><a href="cabinet.html">櫃子</a>
+                        </li>
+                        <li><a href="sofa.html">沙發</a>
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+          
+        </nav>
+
+
+        
+        <div class="icon">
+            <a href="backrest.html">
+                <img src="./assets/image/backrest.png" width="30px" height="30px"/>
+            </a>
+            <a href="buy.car.html">
+                <img src="./assets/image/shopping.png" width="30px" height="30px"/>
+            </a>
+            <a href="member.html">
+                <img src="./assets/image/member.png" width="30px" height="30px"/>
+            </a>
+        </div>
+    
+        <input id="search" type="text" name="" placeholder="搜尋..." class="search">
+        <input type="submit" value="搜尋" class="searchbutton">
+    </header>
+    
+    <div class="information">
+        <!--商品圖片-->
+        <div class="slideshow-container">
+            <div class="singleSlide fade">
+                <img class="productphoto"
+                src="./assets/product_images/DoubleSofa1.png"/>
+        
+            </div>
+            <div class="singleSlide fade">
+                <img class="productphoto"
+                src="./assets/product_images/DoubleSofa2.png"/>
+        
+            </div>
+            <div class="singleSlide fade">
+                <img class="productphoto"
+                src="./assets/product_images/DoubleSofa3.png"/>
+        
+            </div>
+            <!--商品圖片切換按鈕-->
+            <button class="prev" onclick="plusSlides(-1)"><</button>
+            <button class="next" onclick="plusSlides(1)">></button>
+        </div>
+        <!--商品圖片JS-->
+        <script src="./assets/js/index.js"></script>
+        
+        <!--商品基本資訊-->
+        
+        <div class="card">
+        
+            <h1>貓抓皮雙人沙發</h1><br>
+            <div class="price">NT$：14600</div><br>
+        
+        
+        
+            <div class="inventory">商品庫存：10</div>
+        
+            <div class="item1">
+                <!--調整數量的按鈕-->
+                <input type="button" value="-" class="item_button" onclick="minus(0)">
+                <input type="text" value="1" class="item_num">
+                <input type="button" value="+"class="item_button" onclick="add(0)">
+            </div>
+        
+        
+        
+        
+            <!--加入購物車按鈕-->
+        
+            <button value="加入購物車" class="addbutton">加入購物車</button>
+        
+        </div><br>
+        
+        
+        
+        <!--商品介紹-->
+        <div class="introduce">
+            <h2>商品介紹</h2>
+            <div class="features">
+                <div>
+                    <ul>
+                    <li>養寵物專用推薦</li>
+                    <li>防水防塵</li>
+                    <li>清潔簡易</li>
+                    <li>特殊彈簧</li>
+                    </ul>
+        
+                </div>
+                <div>尺寸:70*180*100公分</div>
+        
+            </div>
+        
+        
+        </div>
+    </div>
+
+
+    <hr align="center" width="1300px">
+    <!--顧客輸入評論區-->
+    <p class="commenttxt">評論區</p><br>
+    <div class="comment">
+          
+        <input id="name" type="text" name="" placeholder="請輸入使用者名稱" class="username"><br>
+
+        <!--星星-->
+        <div class="star" id="star-rating">
+            <iconify-icon
+                icon="solar:star-outline"
+                width="40"
+                data-index="1"
+                class="star-icon">
+            </iconify-icon>
+            
+            <iconify-icon
+                icon="solar:star-outline"
+                width="40"
+                data-index="2"
+                class="star-icon">
+            </iconify-icon>
+        
+            <iconify-icon
+                icon="solar:star-outline"
+                width="40"
+                data-index="3"
+                class="star-icon">
+            </iconify-icon>
+        
+            <iconify-icon
+                 icon="solar:star-outline"
+                 width="40"
+                 data-index="4"
+                 class="star-icon">
+            </iconify-icon>
+        
+            <iconify-icon
+                 icon="solar:star-outline"
+                 width="40"
+                 data-index="5"
+                 class="star-icon">
+            </iconify-icon>
+        
+        </div> 
+
+
+        
+        <!--評論內容輸入區域與傳送按鈕-->
+        <p>評論內容：</p><br>
+        <textarea id="content" name="" placeholder="說點什麼..." maxlength="1000" class="content"></textarea><br>
+        <button type="submit" value="send" class="sendbutton">送出</button>
+    
+        
+        
+        
+
+    </div>
+    <!--評論展示區-->
+    <div class="commentarea">
+        <span>顧客1</span>
+        <span>★★★★★</span>
+        <p>家具品質很棒</p>
+        <hr align="center" width="350px">
+        <span>顧客2</span>
+        <span>★★★★★</span>
+        <p>喜歡</p>
+        <hr align="center" width="350px">
+        <span>顧客3</span>
+        <span>★★★★★</span>
+        <p>good!</p>
+        <hr align="center" width="350px">
+        <span>顧客4</span>
+        <span>★★★★★</span>
+        <p>good!</p>
+    </div>
+
+
+
+
+    <script>
+        // 調整數量的按鈕
+        function minus(num) {
+            var number = Number(document.getElementsByClassName("item_num")[num].value);
+            if (number > 1) {
+                number -= 1;
+                document.getElementsByClassName("item_num")[num].value = number;
+            }else window.alert("商品數量不得少於1");
+        }
+        function add(num) {
+            var number = Number(document.getElementsByClassName("item_num")[num].value);
+            if (number < 100) {
+                number += 1;
+                document.getElementsByClassName("item_num")[num].value = number;
+            }else window.alert("商品數量不得超過100");
+        }
+    </script>
+
+
+    <script>
+        //星星
+        document.addEventListener("DOMContentLoaded", function () {
+            const starRating = document.getElementById("star-rating");
+            const starIcons = starRating.querySelectorAll(".star-icon");
+
+            starIcons.forEach((starIcon) => {
+                starIcon.addEventListener("click",function() {
+                    const clickedIndex = parseInt(this.getAttribute("data-index"));
+                    starIcons.forEach((icon,index) => {
+                        if (index<clickedIndex) {
+                            icon.setAttribute("icon","solar:star-bold");
+                        }
+                        else {
+                            icon.setAttribute("icon","solar:star-outline");
+                        }
+                    });
+                    console.log("selected Rating:" + clickedIndex);
+                });
+
+            });
+        });
+    </script>
+  
+  <footer>
+    <h5>瀏覽人數：1000人</h5>
+    <h5>電話：03 265 9999 |地址：320桃園市中壢區中北路200號</h5>
+    <h5>Copyrgiht @ 2023 All rights reserved</h5>
+</footer>
+</body>
+</html>
+
+

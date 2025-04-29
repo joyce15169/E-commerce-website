@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f0ebe6;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        header {
+            background-color: #e0cbc6;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(250, 249, 249);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #a54040;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #a54040;
+            text-decoration: none;
+            font-weight: bold;
+            display: block; 
+            text-align: center; 
+            margin: 20px auto; 
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .tab a {
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #a54040;
+            border: 1px solid #a84b4b;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tab a:hover {
+            background-color: #ccafa7;
+            color: white;
+        }
+    </style>
+    <title>後台系統</title>
+</head>
+<body>
+    <header>
+        <h1>後台系統</h1>
+    </header>
+
+    <main>
+        <div class="tab">
+            <a href="orders.jsp" onclick="showTab('viewOrders')">檢視訂單</a>
+            <a href="#" onclick="showTab('discount')">優惠</a>
+            <a href="#" onclick="showTab('marketing')">行銷</a>
+        </div>
+
+        <div id="viewOrders" class="tab-content active">
+            <h2>檢視訂單：</h2><br>
+           
+        </div>
+
+        <div id="discount" class="tab-content">
+            <h2>優惠：</h2>
+            <p><!-- 有關優惠的內容放在這裡 -->滿1000折100</p>
+        </div>
+
+        <div id="marketing" class="tab-content">
+            <h2>行銷：</h2>
+            <p><!-- 有關行銷的內容放在這裡 -->會員積分</p>
+        </div>
+
+        <a href='index.html'>回首頁</a>
+    </main>
+
+    <script>
+        function showTab(tabName) {
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+        }
+    </script>
+</body>
+</html>

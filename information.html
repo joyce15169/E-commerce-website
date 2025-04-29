@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員資訊</title>
+    <link rel="stylesheet" href="./assets/css/information.css">
+</head>
+<body>
+   <section>
+      <div class="selectbutton">
+         <label for="memberProfile"><input type="button" value="會員資料" onclick="showMemberData()"></label>
+         <label for="order"><input type="button" value="訂單紀錄" onclick="showOrderRecords()"></label>
+         <label for="Home"><input type="button" value="回主頁" onclick="redirectFunction()"></label>
+      </div>
+      
+
+      <div id="memberDataSection">
+         <div class="part">
+            <p>個人資料</p>
+            <div class="input">
+               <input type="text" value="Name">
+               <input type="text" value="Gender">
+               <input type="text" value="Phone">
+               <input type="text" value="abc@gmail.com">
+               <input type="text" value="Address">
+               <input type="date" value="出生日期">
+            </div>
+            <label for="UPDATE"><input type="button" value="UPDATE"></label>
+         </div>
+         
+         <div class="part">
+            <p>帳號密碼</p>
+            <div class="input">
+               <input type="text" value="Account Name">
+               <input type="text" value="Password">
+            </div>
+            <label for="UPDATE"><input type="button" value="UPDATE"></label>
+         </div>
+      </div>
+      
+      
+      <div class="OrderForm" id="orderRecordsSection" style="display:none;">
+         <table>
+            <tr>
+               <td>訂單編號</td>
+               <td>訂單日期</td>
+               <td>商品名稱</td>
+               <td>數量</td>
+               <td>總金額</td>
+               <td>訂單狀態</td>
+            </tr>
+
+            <tr>
+               <td>A20240106</td>
+               <td>2024/01/06</td>
+               <td>貓抓皮雙人沙發</td> 
+               <td>1</td>
+               <td>$1500</td>
+               <td>已完成</td>
+            </tr>
+
+            <tr>
+               <td>A20240106</td>
+               <td>2024/01/06</td>
+               <td>貓抓皮雙人沙發</td> 
+               <td>1</td>
+               <td>$1500</td>
+               <td>已完成</td>
+            </tr>
+         </table>
+      </div>
+   </section>
+   <script src="assets/js/information.js"></script>
+</body>
+</html>
